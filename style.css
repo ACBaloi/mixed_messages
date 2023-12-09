@@ -1,0 +1,27 @@
+/* Universal Styles */
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0 auto;
+}
+
+header h1{
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h2 #banner{
+    font-size: 26px;
+    font-weight: 300;
+    position: relative;
+}
+
+
+#banner img{
+    width: 100%;
+    max-height: auto;
+    position: relative; 
+}
+
+
