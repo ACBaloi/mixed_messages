@@ -1,34 +1,33 @@
 /* Mixed Messages */
 
 const firstVerses = [
-    "good and upright is the Lord;",
-    "he leads the humble in what is right",
-    "oh give thanks to the Lord, for he is good",
-    "but God shows his love for us in that while we were still sinners,"
+    "bom e recto é o Senhor;",
+    "Ele lidera os humildes no é certo",
+    "oh, agradeça ao Senhor porque ele é bom",
+    "mas Deus mostra seu amor por nós enquanto ainda somos pecadores"
 ];
 
 const secondVerses = [
-    "therefore he instructs sinners in the way",
-    "and teaches the humble his way",
-    "for his steadfast love endures forever",
-    "Christ died for us"
+    "portanto, ele instrui os pecadores no caminho",
+    "e ensina o humilde o Seu caminho",
+    "pois seu amor inabalável dura para sempre",
+    "Jesus morreu por nós"
 ];
 
 const thirdVerses = [
-    "give thanks to the God of Heaven",
-    "for God loved the world so much that he gave his only Son",
-    "that whoever believes in him should not perish but have eternal life",
-    "you shall love the Lord your God with all your heart and with all your soul"
+    "dê Graças ao Senhor o teu Deus",
+    "Pois Deus amou tanto o mundo que deu seu único filho",
+    "que quem crê nele não deve perecer, mas terá a vida eterna",
+    "você amará o Senhor, seu Deus, com todo o teu coração e com toda a sua alma"
 ];
 const verses = {firstVerses, secondVerses, thirdVerses};
 
-const randomNumber = Math.floor(Math.random()* verses.firstVerses[i]); 
+const getRandom = (array) => array [Math.floor(Math.random()*array.length)]; 
 
-let buttonClick = document.getElementById('button');
+let buttonClick = Document.getElementById('button')
+
+buttonClick.onclick = verseGenerator;
 
 const verseGenerator = () => {
-    return `Today's Bible quote is: ${randomNumber}`;
+    return `A leitura de hoje é: ${getRandom(verses.firstVerses)}, ${getRandom(verses.secondVerses)}, ${getRandom(verses.thirdVerses)}`;
 };
-
-buttonClick.addEventListener('click', verseGenerator);
-
