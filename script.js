@@ -24,7 +24,7 @@ const verses = {firstVerses, secondVerses, thirdVerses};
 
 const getRandom = (array) => array [Math.floor(Math.random()*array.length)]; 
 
-let buttonClick = document.getElementById('button');
+let buttonClick = document.getElementsById('button');
 
 const verseGenerator = () => {
     document.getElementById('verse').innerHTML =`"${getRandom(verses.firstVerses)}, ${getRandom(verses.secondVerses)}, ${getRandom(verses.thirdVerses)}"`;
