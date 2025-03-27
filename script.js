@@ -30,7 +30,7 @@ let buttonClick = document.getElementById('button');
 const generateRandomVerse = () => {
     let randomVerse = `${createRandom(verse.firstVerses)} ${createRandom(verse.secondVerses)} ${createRandom(verse.thirdVerses)}`;
 
-    // Corrigindo a seleção do elemento e a atualização do conteúdo
+    // Seleção do elemento e a atualização do conteúdo
     let verseElement = document.querySelector('.verse');
     if (verseElement) {
         verseElement.innerHTML = randomVerse;
