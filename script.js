@@ -1,5 +1,4 @@
-/* Mixed Messages */
-
+/* Mixed Messages*/
 const firstVerses = [
     "Bom e recto é o Senhor",
     "Ele lidera os humildes no que é certo",
@@ -20,14 +19,22 @@ const thirdVerses = [
     "que quem crê nele não deve perecer, mas terá a vida eterna.",
     "você amará o Senhor, seu Deus, com todo o teu coração e com toda a sua alma."
 ];
-const verses = {firstVerses, secondVerses, thirdVerses};
 
-const getRandom = (array) => array [Math.floor(Math.random()*array.length)]; 
+const verse = { firstVerses, secondVerses, thirdVerses };
 
-let buttonClick = document.getElementsById('button');
+// Função para escolher um elemento aleatório de um array
+const createRandom = (array) => array[Math.floor(Math.random() * array.length)];
 
-const verseGenerator = () => {
-    document.getElementById('verse').innerHTML =`"${getRandom(verses.firstVerses)}, ${getRandom(verses.secondVerses)}, ${getRandom(verses.thirdVerses)}"`;
+let buttonClick = document.getElementById('button');
+
+const generateRandomVerse = () => {
+    let randomVerse = `${createRandom(verse.firstVerses)} ${createRandom(verse.secondVerses)} ${createRandom(verse.thirdVerses)}`;
+
+    // Corrigindo a seleção do elemento e a atualização do conteúdo
+    let verseElement = document.querySelector('.verse');
+    if (verseElement) {
+        verseElement.innerHTML = randomVerse;
+    }
 };
 
-buttonClick.onclick = verseGenerator;
+buttonClick.onclick = generateRandomVerse;
